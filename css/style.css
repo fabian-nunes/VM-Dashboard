@@ -308,6 +308,8 @@ main .recent-vulnerabilities table{
     box-shadow: var(--box-shadow);
     border-radius: var(--card-border-radius);
     transition: all 0.3s ease;
+    border-collapse: collapse;
+    overflow: hidden;
 }
 
 main .recent-vulnerabilities table:hover{
@@ -318,11 +320,20 @@ main table tbody td{
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
     color: var(--color-dark-variant);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main table th{
+    height: 2.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 main table tbody tr:last-child td{
     border: none;
 }
+
 
 main .recent-vulnerabilities a{
     text-align: center;
@@ -462,6 +473,33 @@ main .recent-vulnerabilities a{
 
 .action-form button:hover {
     background-color: #5a8ccf;
+}
+
+.pagination button {
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4rem 2px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #5a8ccf;
+}
+
+
+table tbody tr:hover {
+    background-color: var(--color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .right-section{
@@ -624,6 +662,61 @@ main .recent-vulnerabilities a{
     display: flex;
     align-items: center;
     gap: 0.6rem;
+}
+
+.filter-form {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.filter-form:hover {
+    box-shadow: none;
+}
+
+.filter-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.filter-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.filter-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-light);
+    font-size: 1rem;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    transition: border-color 0.3s ease;
+}
+
+.filter-form input:focus {
+    border-color: var(--color-primary);
+}
+
+.filter-form button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form button:hover {
+    background-color: #5a8ccf;
 }
 
 @media screen and (max-width: 1200px) {

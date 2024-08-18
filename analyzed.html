@@ -11,6 +11,9 @@
     <div class="container">
         <aside>
             <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
                 <div class="close" id="close-btn">
                     <span class="material-symbols-outlined">
                         close
@@ -53,73 +56,29 @@
         </aside>
 
         <main>
-            <h1>Stats of the week</h1>
-            <div class="stats">
-                <div class="cves">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Total CVEs</h3>
-                            <h1>20</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+81%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="affected">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Confirmed Vulnerabilities</h3>
-                            <h1>5</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+30%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mitigated">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Vulnerabilities Resolved</h3>
-                            <h1>12</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+12%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h1>Analyzed Vulnerabilities</h1>
 
-
-            <div class="recent-vulnerabilities">
-                <h2>Recent Vulnerabilities</h2>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>CVE</th>
-                        <th>CVSS/Severity</th>
-                        <th>Vendor</th>
-                        <th>Exploit</th>
-                        <th>Status</th>
-                    </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+            <div class="scrollable-container">
+                <div class="recent-vulnerabilities">
+                    <h2>Recent Vulnerabilities</h2>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>CVE</th>
+                            <th>CVSS/Severity</th>
+                            <th>Vendor</th>
+                            <th>Exploit</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="pagination">
+                        <button id="prev-btn" onclick="prevPage()">Previous</button>
+                        <span id="page-info"></span>
+                        <button id="next-btn" onclick="nextPage()">Next</button>
+                    </div>
+                </div>
             </div>
 
             <!-- End of Recent Orders -->
@@ -152,50 +111,31 @@
             </div>
             <!-- End of Nav -->
 
-            <div class="user-profile">
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo">
-                    <h2>Vulnerability Management</h2>
-                    <p>Vulnerability Assessment Platform</p>
-                </div>
-            </div>
-
-            <div class="reminders">
-                <div class="header">
-                    <h2>Actions</h2>
-                    <span class="material-symbols-outlined">
-                        crisis_alert
-                    </span>
-                </div>
-
-                <div class="notification">
-                    <div class="icon">
-                        <span class="material-symbols-outlined">
-                             breaking_news_alt_1
-                        </span>
+            <div class="filter-form">
+                <h2>Filter Vulnerabilities</h2>
+                <form id="filter-form">
+                    <div class="form-group">
+                        <label for="filter-cve">CVE</label>
+                        <input type="text" id="filter-cve" name="cve">
                     </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>CVE-2024-1234</h3>
-                            <small class="text_muted">
-                                Action Required
-                            </small>
-                        </div>
-                        <span class="material-symbols-outlined">
-                             more_vert
-                        </span>
+                    <div class="form-group">
+                        <label for="filter-cvss">CVSS/Severity</label>
+                        <input type="text" id="filter-cvss" name="cvss">
                     </div>
-                </div>
-
-                <div class="notification add-reminder">
-                    <div>
-                        <span class="material-symbols-outlined">
-                            add
-                        </span>
-                        <h3>Add Vulnerability</h3>
+                    <div class="form-group">
+                        <label for="filter-vendor">Vendor</label>
+                        <input type="text" id="filter-vendor" name="vendor">
                     </div>
-                </div>
-
+                    <div class="form-group">
+                        <label for="filter-exploit">Exploit</label>
+                        <input type="text" id="filter-exploit" name="exploit">
+                    </div>
+                    <div class="form-group">
+                        <label for="filter-status">Status</label>
+                        <input type="text" id="filter-status" name="status">
+                    </div>
+                    <button type="button" onclick="filterVulnerabilities()">Search</button>
+                </form>
             </div>
         </div>
     </div>
