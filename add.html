@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>VM Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#" class="active">
+                   <span class="material-symbols-outlined">
+                        list_alt
+                   </span>
+                    <h3>Analyzed Cves</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        trending_up
+                   </span>
+                    <h3>Trending Cves</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        manufacturing
+                   </span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Vulnerability Details</h1>
+
+            <div class="scrollable-container">
+                <div class="vuln-data">
+                    <h3 id="cve-id">CVE-2024-1234</h3>
+                    <p id="cve-description">Description of the CVE goes here.</p>
+                    <div class="status">
+                        <p id="cve-date">Published: 2024-01-01</p>
+                        <p id="cve-modified">Modified: 2024-01-01</p>
+                    </div>
+
+                    <div class="status">
+                        <span id="cve-status">Patch: <a href="https://example.com/patch">Patch</a></span>
+                        <span class="severity" id="cve-severity">Severity: High</span>
+                    </div>
+                </div>
+
+                <div class="vuln-data">
+                    <h3>
+                        <span class="material-symbols-outlined">security</span>
+                        CVSS Details
+                    </h3>
+                    <div class="status">
+                        <p id="cvss-score">CVSS Score: 9.8</p>
+                        <p id="epss">Exploitability Score: 3.9</p>
+                    </div>
+
+                    <ul id="cvss-details" class="two-columns">
+                        <li><span class="material-symbols-outlined">network_check</span> <span class="list-text"><strong>Attack Vector:</strong> Network</span></li>
+                        <li><span class="material-symbols-outlined">low_priority</span> <span class="list-text"><strong>Attack Complexity:</strong> Low</span></li>
+                        <li><span class="material-symbols-outlined">lock_open</span> <span class="list-text"><strong>Privileges Required:</strong> None</span></li>
+                        <li><span class="material-symbols-outlined">person</span> <span class="list-text"><strong>User Interaction:</strong> None</span></li>
+                        <li><span class="material-symbols-outlined">sync</span> <span class="list-text"><strong>Scope:</strong> Unchanged</span></li>
+                        <li><span class="material-symbols-outlined">visibility</span> <span class="list-text"><strong>Confidentiality Impact:</strong> High</span></li>
+                        <li><span class="material-symbols-outlined">verified_user</span> <span class="list-text"><strong>Integrity Impact:</strong> High</span></li>
+                        <li><span class="material-symbols-outlined">cloud_done</span> <span class="list-text"><strong>Availability Impact:</strong> High</span></li>
+                    </ul>
+                </div>
+
+                <div class="vuln-data">
+                    <h3>
+                        <span class="material-symbols-outlined">bug_report</span>
+                        Exploits
+                    </h3>
+                    <ul id="exploit-urls">
+                        <li><a href="https://example.com/exploit1">Exploit 1</a></li>
+                        <li><a href="https://example.com/exploit2">Exploit 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="vuln-data">
+                    <h3>
+                        <span class="material-symbols-outlined">description</span>
+                        Executive Summary
+                    </h3>
+                    <p><strong>Impact:</strong> Description of the impact goes here.</p>
+                    <p><strong>Exploitation:</strong> Description of the exploitation goes here.</p>
+                    <p><strong>Description:</strong> Detailed description goes here.</p>
+                    <p><strong>Patch:</strong> Information about the patch goes here.</p>
+                    <p><strong>Mitigation:</strong> Mitigation steps go here.</p>
+                </div>
+
+                <div class="vuln-data">
+                    <h3>
+                        <span class="material-symbols-outlined">flutter</span>
+                        VM Analysis
+                    </h3>
+                    <p id="vm-analysis">Analysis of the VM goes here.</p>
+                    <div class="status">
+                        <span id="new-cve-status">Status: In Progress</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Recent Orders -->
+        </main>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined light">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined dark">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Fabian</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo"></div>
+                </div>
+
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Actions</h2>
+                    <span class="material-symbols-outlined">
+                        crisis_alert
+                    </span>
+                </div>
+
+                <form class="action-form">
+                    <div class="form-group">
+                        <label for="analysis">Analysis</label>
+                        <textarea id="analysis" name="analysis" rows="4" placeholder="Enter your analysis here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option value="action-required">Action Required</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <!-- End of Nav -->
+
+        </div>
+    </div>
+    <script src="js/cves.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

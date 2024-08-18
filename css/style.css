@@ -115,14 +115,13 @@ b{
 
 aside{
     height: 100vh;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 aside .toggle{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.4rem;
 }
 
 aside .toggle .logo{
@@ -131,8 +130,8 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 6rem;
-    height: 6rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 aside .toggle .close{
@@ -294,7 +293,7 @@ main .stats .progress .percentage{
 }
 
 main .recent-vulnerabilities{
-    margin-top: 1.3rem;
+    margin-top: 3rem;
 }
 
 main .recent-vulnerabilities h2{
@@ -330,6 +329,139 @@ main .recent-vulnerabilities a{
     display: block;
     margin: 1rem auto;
     color: var(--color-primary);
+}
+
+.scrollable-container {
+    height: 80vh; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.vuln-data {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+
+
+.vuln-data h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vuln-data p {
+    color: var(--color-dark-variant);
+    margin-bottom: 0.8rem;
+}
+
+.vuln-data .status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.vuln-data .status span {
+    font-size: 1rem;
+    color: var(--color-info-dark);
+}
+
+.vuln-data h3 .material-symbols-outlined {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.vuln-data .status .severity {
+    font-weight: 700;
+    color: var(--color-danger);
+}
+
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.two-columns li {
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.two-columns li .material-symbols-outlined {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+
+.action-form {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.action-form:hover {
+    box-shadow: none;
+}
+
+.action-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.action-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.action-form textarea,
+.action-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-light);
+    font-size: 1rem;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    transition: border-color 0.3s ease;
+}
+
+.action-form textarea:focus,
+.action-form select:focus {
+    border-color: var(--color-primary);
+}
+
+.action-form button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-form button:hover {
+    background-color: #5a8ccf;
 }
 
 .right-section{
@@ -391,7 +523,7 @@ main .recent-vulnerabilities a{
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url('images/profile.jpg');
+    background-image: url('../images/profile.jpg');
 }
 
 .right-section .user-profile{
@@ -471,6 +603,27 @@ main .recent-vulnerabilities a{
     background-color: var(--color-success);
     border-radius: 20%;
     display: flex;
+}
+
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .reminders .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .reminders .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 @media screen and (max-width: 1200px) {
