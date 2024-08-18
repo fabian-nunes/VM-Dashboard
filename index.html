@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>VM Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active" id="dashboard">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        list_alt
+                   </span>
+                    <h3>Analyzed Cves</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        trending_up
+                   </span>
+                    <h3>Trending Cves</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        manufacturing
+                   </span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                   <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Stats of the week</h1>
+            <div class="stats">
+                <div class="cves">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total CVEs</h3>
+                            <h1>20</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="affected">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Confirmed Vulnerabilities</h3>
+                            <h1>5</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+30%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mitigated">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Vulnerabilities Resolved</h3>
+                            <h1>12</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+12%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recent-vulnerabilities">
+                <h2>Recent Vulnerabilities</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>CVE</th>
+                        <th>CVSS/Severity</th>
+                        <th>Vendor</th>
+                        <th>Exploit</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <!-- End of Recent Orders -->
+        </main>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined light">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined dark">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Fabian</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo"></div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <h2>Vulnerability Management</h2>
+                    <p>Vulnerability Assessment Platform</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                             breaking_news_alt_1
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>CVE-2024-1234</h3>
+                            <small class="text_muted">
+                                Action Required
+                            </small>
+                        </div>
+                        <span class="material-symbols-outlined">
+                             more_vert
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cves.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
